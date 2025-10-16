@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "528f7a77-6b22-4004-a194-8ca89be774b1",
+		"name": "DentalClinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22466861",
+		"_collection_link": "https://www.postman.com/cloudy-space-264912/workspace/backend/collection/22466861-528f7a77-6b22-4004-a194-8ca89be774b1?action=share&source=collection_link&creator=22466861"
+	},
+	"item": [
+		{
+			"name": "Odontólogos",
+			"item": [
+				{
+					"name": "Consultar Odontologo por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/odontologos/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Odontologos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"registration\": 12541,\r\n    \"name\": \"Carlitos\",\r\n    \"lastName\": \"Odonto\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/odontologos"
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar Odontologos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"registration\": 12541,\r\n    \"name\": \"Carlos\",\r\n    \"lastName\": \"Odonto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/odontologos"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Odontólogo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/odontologos/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Odontólogos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/odontologos"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar por matrícula",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/odontologos/registration/58582"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "Guardar pacientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"lastName\": \"Garcia\",\r\n    \"email\": \"paciente@gmail.com\",\r\n    \"cardIdentity\": 22222222,\r\n    \"admissionOfDate\": \"2024-01-05\",\r\n    \"address\": {\r\n        \"street\": \"Calle a\",\r\n        \"number\": 11,\r\n        \"location\": \"Luján\",\r\n        \"province\": \"Mendoza\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/pacientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Pacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/pacientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar pacientes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9,\r\n    \"name\": \"Juan\",\r\n    \"lastName\": \"Garcia\",\r\n    \"email\": \"paciente@gmail.com\",\r\n    \"cardIdentity\": 22222222,\r\n    \"admissionOfDate\": \"2024-01-05\",\r\n    \"address\": {\r\n        \"id\": 9,\r\n        \"street\": \"Calle a\",\r\n        \"number\": 11,\r\n        \"location\": \"Luján\",\r\n        \"province\": \"Mendoza\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/pacientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Paciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/pacientes/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turnos",
+			"item": [
+				{
+					"name": "Listar turnos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/turnos"
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Turnos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"dentist_id\":1,\r\n    \"patient_id\":1,\r\n    \"date\": \"2024-01-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/turnos"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar turno por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/turnos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar turno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\": 1,\r\n    \"dentist_id\":1,\r\n    \"patient_id\":1,\r\n    \"date\": \"2024-01-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/turnos"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Turno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/turnos/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seguridad",
+			"item": [
+				{
+					"name": "Registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Juan\",\r\n    \"lastname\": \"Perez\",\r\n    \"email\": \"juan@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"juan@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/auth/login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
